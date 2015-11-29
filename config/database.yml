@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: sneakers_development
+
+test:
+  <<: *default
+  database: sneakers_test
+
+production:
+  <<: *default
+  database: sneakers_production
+  username: sneakers
